@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import LoginView from "./LoginView";
 
 export default function Home() {
   return (
-    <div>
-      <Button>teste btn</Button>
-    </div>
+    <>
+    <LoginView />
+    </>
   );
 }

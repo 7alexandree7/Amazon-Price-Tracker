@@ -1,6 +1,10 @@
+import { auth } from "@/auth";
 import LoginView from "./LoginView";
 
-export default function Home() {
+export default async function Home() {
+
+  const sesstion = await auth();
+  console.log(sesstion);
   return (
     <>
     <LoginView />

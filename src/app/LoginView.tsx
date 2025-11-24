@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { LogInIcon } from 'lucide-react'
 import React from 'react'
+import { signIn } from "@/auth"
 
 const LoginView = () => {
     return (
@@ -12,7 +13,16 @@ const LoginView = () => {
                     <p>Plase login to continue</p>
                 </div>
                 <div className='w-full flex items-center justify-center '>
-                    <Button className='flex items-center  gap-2 cursor-pointer p-6 rounded-lg'><LogInIcon /> Login with Google</Button>
+                    <form action={async () => {
+                        'use server'
+                        await signIn('google')
+                    }}>
+                        <Button
+                            type='submit'
+                            className='flex items-center  gap-2 cursor-pointer p-6 rounded-lg'>
+                            <LogInIcon /> Login with Google
+                        </Button>
+                    </form>
                 </div>
             </Card>
         </div>

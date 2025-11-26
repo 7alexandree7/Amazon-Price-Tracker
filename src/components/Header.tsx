@@ -18,17 +18,17 @@ const Header = ({ user }: HeaderProps) => {
     console.log('User in Header:', user);
     return (
         <header className="max-w-7xl mx-auto py-2">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center p-4">
 
-                <Link className="flex items-center gap-2 p-4" href={'/'}>
-                    <ChartNoAxesCombinedIcon />
-                    <h1>AmazonPriceTracker</h1>
+                <Link className="flex items-center gap-2 " href={'/'}>
+                    <ChartNoAxesCombinedIcon className="w-6 h-6" />
+                    <h1 className="text-2xl font-semibold tracking-tight">AmazonPriceTracker</h1>
                 </Link>
 
-                <div className="flex gap-4 items-center relative">
+                <div className="flex gap-4  items-center relative">
                     <div className="flex items-center ">
-                        <SearchIcon className="w-4 h-4 absolute left-2 text-gray-600" />
-                        <Input type="text" placeholder="Search..." className="pl-8 w-54 pointer-events-none" />
+                        <SearchIcon className="w-4 h-4 absolute left-2 text-gray-600 pointer-events-none" />
+                        <Input type="text" placeholder="Search..." className="pl-8 w-54 " />
                     </div>
 
                     <div className="cursor-pointer">

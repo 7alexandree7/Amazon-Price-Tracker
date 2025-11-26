@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <>
       {user ? (
-      <Header user={user} />
+        <Header user={user} />
       ) : (
         <LoginView />
       )}
